@@ -33,4 +33,8 @@ def parse_cliargs():
     required=False,
     help="Additional console output will be provided for each scraped result")
 
+    parser.add_argument('--format',
+    type=str,
+    required=False,
+    help="generat the result in formats of --format='excel' or --format='json'")
     return parser.parse_args()
