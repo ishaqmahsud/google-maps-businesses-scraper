@@ -14,7 +14,8 @@ Built with Python running Selenium, this app allows you to scrape places info fr
   * Flag that if included in the command, will tell the app to not scrape the results which have the addresses that is already in the file
 * `--scrape-website`
   * Flag that if included in the command, will tell the app to scrape website URLs too. This is optional and defaults fo false because the process is greatly slower with this flag on
-
+* `--format`
+  * "generat the result in formats of --format='excel' or --format='json'"
 ## Examples
 The example command you can run with this app is:
 ```
@@ -32,7 +33,7 @@ The above command will scrape all **Commercial property managers** that are **ne
 The app allows you to scrape the website urls for each company. This is disabled by default as it slows down the process.
 You can enable this by including a flag `--scrape-website` in the command like so:
 ```
-python script.py --query="Commercial property managers near" --places="Washington,Miami,Chicago" --scrape-website
+python script.py --query="Commercial property managers near" --places="Washington,Miami,Chicago" --scrape-website --fromat="json"
 ```
 
 This will add "Website" column to the excel output file.
