@@ -37,6 +37,9 @@ def scrape(args):
     SETTINGS["FORMAT"] = "excel"
     if args.format is not None:
         SETTINGS["FORMAT"] = args.format
+    FILE_NAME = "googlemaps_scraped_data"
+    if args.filename is not None:
+        FILE_NAME = args.filename.split(".")[0]
     # Created driver and wait
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 15)
@@ -47,7 +50,7 @@ def scrape(args):
 
     if SETTINGS['FORMAT'] == "excel":
         # Initialize workbook / worksheet
-        workbook = xlsxwriter.Workbook('Scraped_Data_GoogleMaps.xlsx')
+        workbook = xlsxwriter.Workbook(f'{FILE_NAME}.xlsx')
         worksheet = workbook.add_worksheet()
 
         # Headers and data
@@ -60,7 +63,8 @@ def scrape(args):
         }
         headers = generate_headers(args, data)
         print_table_headers(worksheet, headers)
-
+     
+  
     # Start from second row in xlsx, as first one is reserved for headers
     row = 1
 
@@ -115,12 +119,7 @@ def scrape(args):
                     # Just get the values, add only after we determine this is not a duplicate (or duplicates should not be skiped)
                     el_name = parse_item(box, ".//a")
                     name = parse_attr(el_name, "aria-label")
-                    website = ""
-                    try:
-                        el_website = parse_item(box, ".//a[@data-value='Website']")
-                        website = parse_attr(el_website, "href")
-                    except: 
-                        pass
+                   
                     try:
                         el_name.click()
                     except:
@@ -128,6 +127,14 @@ def scrape(args):
                          el_name.click()
                     wait_for_el(wait, DETAIL_BOX)
                     el_detail = parse_item(driver, DETAIL_BOX)
+                    website = ""
+                    try:
+                        web_xpath = "//a[starts-with(@aria-label, 'Website: ')]"
+                        wait_for_el(wait, adress_xpath)
+                        el_website = parse_item(box, web_xpath)#parse_item(box, ".//a[@data-value='Website']")
+                        website = parse_attr(el_website, "aria-label").replace('Website: ', '')
+                    except: 
+                        pass
                     address = ""
                     try:
                         adress_xpath = ".//button[@data-item-id='address']"
@@ -150,7 +157,7 @@ def scrape(args):
                         email = ""
                     idata["name"] = name
                     if args.scrape_website:
-                        idata['website'] = web
+                        idata['website'] = website
                     idata["address"] = address.replace("Address: ", "")
                     idata["phone"] = phone.replace("Phone: ", "")
                     idata['email'] = email
@@ -167,7 +174,7 @@ def scrape(args):
             time.sleep(1)
         # Writing JSON data to a file
         if SETTINGS['FORMAT'] == "json":
-            with open("testing.json", 'w') as json_file:
+            with open(f'{FILE_NAME}.json', 'w') as json_file:
                 json.dump(scraped_data, json_file, indent=4)  
         print("-------------------")
     if SETTINGS['FORMAT'] == "excel":

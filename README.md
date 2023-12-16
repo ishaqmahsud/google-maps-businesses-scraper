@@ -16,6 +16,8 @@ Built with Python running Selenium, this app allows you to scrape places info fr
   * Flag that if included in the command, will tell the app to scrape website URLs too. This is optional and defaults fo false because the process is greatly slower with this flag on
 * `--format`
   * "generat the result in formats of --format='excel' or --format='json'"
+* `--filename`
+  * "generat file with give name --filename='googlemap_scraped_data'"
 ## Examples
 The example command you can run with this app is:
 ```

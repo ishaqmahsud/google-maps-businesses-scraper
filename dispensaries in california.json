@@ -14,13 +14,6 @@
         "email": null
     },
     {
-        "name": "GreenStone Retail",
-        "phone": "+1 760-338-3435 ",
-        "address": "6508 California City Blvd, California City, CA 93505, United States ",
-        "website": "greenstoneretail.com ",
-        "email": null
-    },
-    {
         "name": "California Holistics",
         "phone": "+1 619-629-0032 ",
         "address": "810 Paseo del Rey, Chula Vista, CA 91910, United States ",
@@ -78,9 +71,9 @@
     },
     {
         "name": "MMD Dispensary North Hollywood",
-        "phone": "+1 559-412-1658 ",
-        "address": "Delivery only, Fresno, CA 93720, United States ",
-        "website": "420tinyweeds.com ",
+        "phone": "+1 818-980-6337 ",
+        "address": "4720 Vineland Ave, North Hollywood, CA 91602, United States ",
+        "website": "mmdshops.com ",
         "email": null
     },
     {
@@ -94,7 +87,7 @@
         "name": "Vibe by California | Port City | Stockton Cannabis Dispensary",
         "phone": "+1 209-636-2307 ",
         "address": "1550 W Fremont St # 100, Stockton, CA 95203, United States ",
-        "website": "mercywellness.com ",
+        "website": "vibebycalifornia.com ",
         "email": null
     },
     {
@@ -106,22 +99,22 @@
     },
     {
         "name": "California Cannabis Melrose",
-        "phone": "+1 323-536-9212 ",
-        "address": "654 N Manhattan Pl, Los Angeles, CA 90004, United States ",
-        "website": "californiacannabiswc.com ",
+        "phone": "+1 714-754-1348 ",
+        "address": "3122 S Halladay St suite a, Santa Ana, CA 92705, United States ",
+        "website": "oc3dispensary.com ",
         "email": null
     },
     {
         "name": "Vibe by California | Sacramento | Cannabis Dispensary",
-        "phone": "+1 916-739-6337 ",
-        "address": "8112 Alpine Ave, Sacramento, CA 95826, United States ",
-        "website": "vibebycalifornia.com ",
+        "phone": "+1 714-754-1348 ",
+        "address": "3122 S Halladay St suite a, Santa Ana, CA 92705, United States ",
+        "website": "oc3dispensary.com ",
         "email": null
     },
     {
         "name": "West Coast Cannabis Club Dispensary - Palm Desert",
-        "phone": "+1 916-739-6337 ",
-        "address": "8112 Alpine Ave, Sacramento, CA 95826, United States ",
+        "phone": "+1 442-282-5101 ",
+        "address": "74-425 CA-111, Palm Desert, CA 92260, United States ",
         "website": "vibebycalifornia.com ",
         "email": null
     },
@@ -129,14 +122,21 @@
         "name": "Vibe by California | Redding Cannabis Dispensary",
         "phone": "+1 530-276-0035 ",
         "address": "3270 S Market St, Redding, CA 96001, United States ",
-        "website": "vibebycalifornia.com ",
+        "website": "",
         "email": null
     },
     {
         "name": "Exotic Weeds",
         "phone": "+1 559-612-5395 ",
         "address": "3085 E Campus Pointe Dr, Fresno, CA 93710, United States ",
-        "website": "420exoticweeds.com ",
+        "website": "",
+        "email": null
+    },
+    {
+        "name": "Cannable Cannabis Weed Dispensary Parlier",
+        "phone": "+1 559-254-5066 ",
+        "address": "885 Manning Ave suite 200, Parlier, CA 93648, United States ",
+        "website": "cannablecannabis.com ",
         "email": null
     }
 ]

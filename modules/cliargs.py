@@ -37,4 +37,8 @@ def parse_cliargs():
     type=str,
     required=False,
     help="generat the result in formats of --format='excel' or --format='json'")
+    parser.add_argument('--filename',
+    type=str,
+    required=False,
+    help="--filename='filename'")
     return parser.parse_args()
